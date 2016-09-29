@@ -6,6 +6,8 @@ var configuration = {
             clientSecret: '6e39e66c219715c90c64e76c0e4daeea',
             callbackURL: 'http://localhost:4000/login/facebook/return'
         },
+      wallMartUrl: "http://api.walmartlabs.com/v1/",
+  wallMartApiKey: "apiKey=yjrruzc9fgbxvs28qw2rjczv&format=json"
 };
 
 module.exports = configuration;

@@ -1,12 +1,12 @@
 var passport = require('passport');
 var authenticate = require("../utils/authenticate");
 module.exports = function(app) {
-  /*var isAuthenticated = function(req, res, next) {
+  var isAuthenticated = function(req, res, next) {
     if (!req.isAuthenticated()) {
       res.redirect("/login");
     }
     next();
-  };*/
+  };
   var ctrl = require("../controllers/registerCtrl");
   app.get("/register", ctrl.get);
   app.post("/register", ctrl.post);
@@ -16,10 +16,10 @@ module.exports = function(app) {
     failureRedirect: '/login',
     failureFlash: true
   }));
-  /*app.get('/oauth/facebook', passport.authenticate('facebook', {
+app.get('/oauth/facebook', passport.authenticate('facebook', {
     failureRedirect: '/login',
     scope: ['email']
-  }));*/
+  }));
 
 
 
